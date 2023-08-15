@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block body %}
+{% from "includes/formhelpers.html" import render_field %}
+<style>
+    h3 {
+        /* border-radius: 30px; */
+
+        background-color: rgb(163, 193, 204);
+        color: white;
+        text-align: center;
+        letter-spacing: 4px;
+        animation: slideRightToLeft 10s infinite alternate;
+
+    }
+
+
+
+    @keyframes slideRightToLeft {
+        from {
+            border-end-end-radius: 7px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 40px;
+            border-bottom-left-radius: 8px;
+            margin-right: 900px;
+            background-color: rgb(153, 28, 236);
+        }
+
+        to {
+            border-end-end-radius: 10px;
+            border-top-left-radius: 40px;
+            border-top-right-radius: 8px;
+            border-bottom-left-radius: 8px;
+
+            margin-left: 900px;
+            background-color: rgb(248, 153, 12);
+
+        }
+    }
+
+    .btn {
+        border-radius: 30px;
+        font-size: larger;
+
+
+    }
+</style>
+
+<h3>KAYIT OLUN</h3>
+<hr>
+
+<form method="post">
+    {{ render_field(form.name,class = "form-control") }}
+    {{ render_field(form.username,class = "form-control") }}
+    {{ render_field(form.email,class = "form-control") }}
+    {{ render_field(form.password,class = "form-control") }}
+    {{ render_field(form.confirm,class = "form-control") }}
+    <button type="submit" class="btn btn-success">KAYIT OL</button>
+</form>
+
+
+{% endblock body %}

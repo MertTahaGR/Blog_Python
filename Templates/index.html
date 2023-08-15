@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="jumbotron text-center">
+    <h3> Deneme Sitesine Hoş Geldiniz</h3>
+    <p>Bu Sitede Her Hangi Bildiğimiz Bütün Bilgileri Ekleyebiliriz</p>
+
+</div>
+<ul>
+    {% for number in numbers %}
+        <li>{{number}}</li>
+
+    {% endfor %}
+</ul>
+
+
+{% endblock %}
